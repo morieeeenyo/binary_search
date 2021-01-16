@@ -1,8 +1,5 @@
 <div class="container">
 <h1><%= link_to 'BinarySearch', root_path, class: 'title' %></h1>
-<% if @index %>
-<%= @index %>
-<% end %>
 <%= link_to 'Set Array' , set_binaries_path, class: 'link' %>
 <%= form_with url: binary_search_binaries_path, id: 'number-form' do |f| %>
 <div class="numbers">
