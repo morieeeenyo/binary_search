@@ -17,7 +17,7 @@
  <%= f.hidden_field :numbers, name: 'numbers[]', value: number, id: "input_#{number}" %>
 <% end %>
 </div>
- <%= f.text_field :target, class: 'search-number' %>
+ <%= f.text_field :target, class: 'search-number', placeholder: '検索したい数字を入力してください' %>
  <%= f.submit 'submit', class: 'submit'%>
 <% end %>
 </div>
