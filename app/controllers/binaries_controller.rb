@@ -1,5 +1,5 @@
 class BinariesController < ApplicationController
-  before_action :set_number, only: [:index, :set]
+  before_action :set_number, only: [:index]
   def index
   end
 
@@ -51,7 +51,7 @@ class BinariesController < ApplicationController
     @numbers = []
 
     @number_data.each do |number| 
-      @numbers << number.number
+      @numbers << number.number #findで取ってこれるのはあくまでモデルデータなので数字だけを表示するために空配列に代入し直す
     end
   end
 
