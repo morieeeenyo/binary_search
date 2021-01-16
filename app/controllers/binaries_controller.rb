@@ -50,7 +50,7 @@ class BinariesController < ApplicationController
   end
 
   def set_number 
-    @number_data = Number.find(Number.pluck(:id).shuffle[0..10]).sort
+    @number_data = Number.find(Number.pluck(:id).shuffle[0..49]).sort
     @numbers = []
 
     @number_data.each do |number| 

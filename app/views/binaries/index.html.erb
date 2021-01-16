@@ -13,7 +13,7 @@
 <%= form_with url: binary_search_binaries_path, id: 'number-form' do |f| %>
 <div class="numbers">
 <% @numbers.each do |number| %>
- <p id=<%=number%>><%= number %></p>
+ <p class="number" id=<%=number%>><%= number %></p>
  <%= f.hidden_field :numbers, name: 'numbers[]', value: number, id: "input_#{number}" %>
 <% end %>
 </div>
