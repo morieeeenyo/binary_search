@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   root 'binaries#index'
   resources :binaries do 
     collection do 
-     get 'set' 
      post 'binary-search'
     end
   end

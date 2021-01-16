@@ -4,6 +4,12 @@
 
 body {
   background: gray;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
 }
 
 .title {
@@ -11,10 +17,17 @@ body {
   color: black;
 }
 
+.description {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .container {
   background: white;
   width: 50%;
+  height: 100vh;
   margin: 0 auto;
+  padding: 10px 15px;
 }
 
 #number-form {
@@ -38,10 +51,18 @@ body {
   display: flex;
   justify-content: space-around;
   width: 100%;
+  flex-wrap: wrap;
 }
 
+.number, .deleted, .target {
+  width: 10%;
+  // widthを10%にすると一列に数字が10個並ぶ
+  text-align: center;
+}
+
+
 .deleted {
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .target {
@@ -60,7 +81,15 @@ body {
   margin-bottom: 10px;
 }
 
-.link-to-new:hover {
+.link:hover {
+  // ホバーしたときの動きを入れることでわかりやすくする
   background: red;
   color: white;
+  opacity: 0.7;
+}
+
+.search-number {
+  width: 300px;
+  height: 50px;
+  text-align: center;
 }
