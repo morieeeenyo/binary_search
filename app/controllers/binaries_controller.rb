@@ -3,10 +3,6 @@ class BinariesController < ApplicationController
   def index
   end
 
-  def set
-    render :index
-  end
-
   def binary_search 
     @numbers = params[:numbers]  
     unless @numbers

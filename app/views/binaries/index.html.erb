@@ -9,7 +9,7 @@
   <li>1~3を繰り返し、検索したい数字が見つかれば赤字で表示されます。検索した結果見つからなかった場合も含めポップアップが出ますので、ポップアップを閉じて、画面右のSet Arrayのボタンを押してください。</li>
  </ol>
 </div>
-<%= link_to 'Set Array' , set_binaries_path, class: 'link' %>
+<%= link_to 'Set Array' , root_path, class: 'link' %>
 <%= form_with url: binary_search_binaries_path, id: 'number-form' do |f| %>
 <div class="numbers">
 <% @numbers.each do |number| %>
