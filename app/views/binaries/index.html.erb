@@ -1,5 +1,14 @@
 <div class="container">
 <h1><%= link_to 'BinarySearch', root_path, class: 'title' %></h1>
+<div class="description">
+ <span>使い方</span>
+ <ol>
+  <li>検索したい数字をフォームに入力します。</li>
+  <li>検索した値と数列の中央の値を比較します。</li>
+  <li>検索した値が中央の値より大きければ右半分、小さければ左半分のみが黒く表示され、検索対象から外れた数字は透明になります。</li>
+  <li>1~3を繰り返し、検索したい数字が見つかれば赤字で表示されます。検索した結果見つからなかった場合も含めポップアップが出ますので、ポップアップを閉じて、画面右のSet Arrayのボタンを押してください。</li>
+ </ol>
+</div>
 <%= link_to 'Set Array' , set_binaries_path, class: 'link' %>
 <%= form_with url: binary_search_binaries_path, id: 'number-form' do |f| %>
 <div class="numbers">
