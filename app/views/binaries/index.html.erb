@@ -1,0 +1,18 @@
+<div class="container">
+<h1><%= link_to 'BinarySearch', root_path, class: 'title' %></h1>
+<% if @index %>
+<%= @index %>
+<% end %>
+<%= link_to 'Add Array' , new_binary_path, class: 'link' %>
+<%= link_to 'Set Array' , set_binaries_path, class: 'link' %>
+<%= form_with url: binary_search_binaries_path, id: 'number-form' do |f| %>
+<div class="numbers">
+<% @numbers.each do |number| %>
+ <p id=<%=number%>><%= number %></p>
+ <%= f.hidden_field :numbers, name: 'numbers[]', value: number, id: "input_#{number}" %>
+<% end %>
+</div>
+ <%= f.text_field :target, class: 'search-number' %>
+ <%= f.submit 'submit', class: 'submit'%>
+<% end %>
+</div>

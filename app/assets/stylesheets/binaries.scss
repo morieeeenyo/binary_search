@@ -1,0 +1,66 @@
+// Place all the styles related to the binaries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background: gray;
+}
+
+.title {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  background: white;
+  width: 50%;
+  margin: 0 auto;
+}
+
+#number-form {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+}
+
+.number-input {
+  width: 30px;
+  height: 25px;
+  text-align: center;
+}
+
+.submit {
+  padding: 2%;
+  margin: 2vh 0;
+}
+
+.numbers {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.deleted {
+  opacity: 0.5;
+}
+
+.target {
+  color: red;
+  font-weight: bold;
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  color: red;
+  border: 1px solid black;
+  padding: 5px;
+  margin-left: 80%;
+  margin-bottom: 10px;
+}
+
+.link-to-new:hover {
+  background: red;
+  color: white;
+}
