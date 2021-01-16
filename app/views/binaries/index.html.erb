@@ -9,14 +9,18 @@
   <li>1~3を繰り返し、検索したい数字が見つかれば赤字で表示されます。検索した結果見つからなかった場合も含めポップアップが出ますので、ポップアップを閉じて、画面右のSet Arrayのボタンを押してください。</li>
  </ol>
 </div>
+<%# 検索が終了した後再度検索するためのボタン %>
 <%= link_to 'Set Array' , root_path, class: 'link' %>
 <%= form_with url: binary_search_binaries_path, id: 'number-form' do |f| %>
 <div class="numbers">
 <% @numbers.each do |number| %>
+<%# 実際に表示されている数字。idはJSで透明化させるときに使う %>
  <p class="number" id=<%=number%>><%= number %></p>
+ <%# ここから検索対象となる配列の数字のデータを飛ばす %>
  <%= f.hidden_field :numbers, name: 'numbers[]', value: number, id: "input_#{number}" %>
 <% end %>
 </div>
+<%# 検索したい数字を入力 %>
  <%= f.text_field :target, class: 'search-number', placeholder: '検索したい数字を入力してください' %>
  <%= f.submit 'submit', class: 'submit'%>
 <% end %>
