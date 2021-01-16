@@ -3,7 +3,6 @@
 <% if @index %>
 <%= @index %>
 <% end %>
-<%= link_to 'Add Array' , new_binary_path, class: 'link' %>
 <%= link_to 'Set Array' , set_binaries_path, class: 'link' %>
 <%= form_with url: binary_search_binaries_path, id: 'number-form' do |f| %>
 <div class="numbers">

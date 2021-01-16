@@ -3,19 +3,6 @@ class BinariesController < ApplicationController
   def index
   end
 
-  def new 
-    @key_array = Number.new
-  end
-
-  def create 
-    @key_array = Nunber.new(array_params)
-    if @key_array.save 
-      redirect_to root_path
-    else
-      render :new 
-    end
-  end
-
   def set
     render :index
   end
