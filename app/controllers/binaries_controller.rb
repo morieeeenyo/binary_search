@@ -47,7 +47,7 @@ class BinariesController < ApplicationController
   end
 
   def set_number 
-    @number_data = Number.find(Number.pluck(:id).shuffle[0..49]).sort #DB内にある100個の数字からランダムに49個取得して小さい順に並べる
+    @number_data = Number.all.sample(50).sort #DB内にある100個の数字からランダムに49個取得して小さい順に並べる
     @numbers = []
 
     @number_data.each do |number| 
